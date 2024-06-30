@@ -1,329 +1,231 @@
 /*! bulma.io v0.9.1 | MIT License | github.com/jgthms/bulma */
-/* Bulma Utilidades  */
-@import 'bulma/css/bulma.css';
+/* Bulma Utilidades */
 
-html {
-  height: 100%;
+@-webkit-keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
-body {
-  position: relative;
-  padding-bottom: 75px;
-  min-height: 100%;
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
-.centrar {
-  text-align: center;
+/* Estilos generales para elementos que no deben seleccionarse */
+.delete, .modal-close, .button, .file, .breadcrumb, .pagination-previous,
+.pagination-next,
+.pagination-link,
+.pagination-ellipsis, .tabs, .is-unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-/* encabezado */
-.encabezado_nav {
-  background: linear-gradient(90deg, #fff 20%, rgba(0,0,0,.6) 60%);
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  height: 60px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.logo {
-  width: 120px;
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  width: 100%;
-}
-
-.nav_global {
-  display: flex;
-  justify-content: flex-end;
-  align-items: stretch;
-}
-
-.nav_global_item {
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #fff;
-  text-decoration: none;
-}
-
-.nav_global_item:hover {
-  background: #fff;
-  color: #42210b;
-}
-
-/* pie de página */
-.pie {
-  width: 100%;
-  background: #251e19;
-  position: absolute;
-  bottom: -75px;
-  padding-bottom: 10px;
-  height: 75px;
-}
-
-.pie_nav {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.pie_nav_item {
-  padding: 0 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-  text-decoration: none;
-  font-size: 15px;
-}
-
-.pie_logo {
-  width: 80px;
-}
-
-.pie_derechos {
-  color: white;
-  text-align: center;
-  font-size: 10px;
-}
-
-/* visual principal */
-.visual {
-  height: 500px;
-  background: center / cover no-repeat url("../imagenes/sample_key.jpg");
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: 'Noto Serif JP', serif;
-}
-
-.visual h1 {
-  font-size: 2.5rem;
-}
-
-/* sección concepto */
-.concepto_inner {
-  display: flex;
-  justify-content: space-between;
-}
-
-.concepto_contenido {
-  width: 60%;
-}
-
-.concepto_imagen {
-  width: 35%;
-}
-
-/* sección común */
-.seccion_inner {
-  padding: 50px 10% 30px;
-}
-
-.seccion_titulo {
-  font-family: 'Noto Serif JP', serif;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-/* sección información */
-.info {
-  display: flex;
-}
-
-.info_titulo {
-  width: 80px;
-}
-
-.area_frame {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;
-}
-
-.frame_child {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* sección menú */
-.seccion_menu {
-  background: url("../imagenes/sample_menu_bg.jpg") no-repeat bottom;
-  background-attachment: fixed;
-}
-
-.titulo_menu {
-  display: inline-block;
-  font-family: 'Noto Serif JP', serif;
-  text-align: center;
-  font-size: 1.5rem;
-  color: #42210b;
-  border-bottom: solid #42210b 1px;
-  margin-bottom: 20px;
-}
-
-.menu_cafe {
-  background: #fff;
-  padding: 20px;
-}
-
-.menu_lista_item {
-  width: 49%;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  padding: 10px;
-}
-
-.menu_imagen_cafe {
-  width: 20%;
-  border-radius: 50%;
-}
-
-.menu_contenido_cafe {
-  width: 80%;
-  padding: 10px;
-}
-
-/* página de menú */
-.menu_visual {
-  height: 100px;
-  background: url("../imagenes/sample_key.jpg") no-repeat center;
-  background-size: cover;
-}
-
-.wrapper {
-  display: flex;
-}
-
-.main {
-  padding: 0 0 0 50px;
-  width: calc(100% - 200px);
-}
-
-/* menú lateral de la página de menú */
-.menu_lateral {
-  width: 200px;
-}
-
-.titulo_menu_lateral {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 25px;
-  padding-left: 10px;
-}
-
-.item_menu_lateral {
-  padding: 20px 10px;
-  border-bottom: solid #42210b 1px;
+/* Estilos para pseudo-elementos de flecha en selectores y enlaces de navbar */
+.select:not(.is-multiple):not(.is-loading)::after, .navbar-link:not(.is-arrowless)::after {
+  border: 3px solid transparent;
+  border-radius: 2px;
+  border-right: 0;
+  border-top: 0;
+  content: " ";
   display: block;
-  text-decoration: none;
+  height: 0.625em;
+  margin-top: -0.4375em;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: rotate(-45deg);
+  transform-origin: center;
+  width: 0.625em;
 }
 
-.item_menu_lateral:hover {
-  background: rgba(83,71,65,.3);
+/* Margen inferior para elementos que no sean el último hijo */
+.box:not(:last-child), .content:not(:last-child), .notification:not(:last-child), .progress:not(:last-child), .table:not(:last-child), .table-container:not(:last-child), .title:not(:last-child),
+.subtitle:not(:last-child), .block:not(:last-child), .highlight:not(:last-child), .breadcrumb:not(:last-child), .level:not(:last-child), .message:not(:last-child), .pagination:not(:last-child), .tabs:not(:last-child) {
+  margin-bottom: 1.5rem;
 }
 
-.anuncio_lateral {
-  color: #fff;
-  background: rgba(83,71,65,.7);
-  padding: 20px;
-  margin: 30px 0;
-}
-
-/* página principal del menú */
-.imagen_menu {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-}
-
-.nombre_menu {
-  font-family: 'Noto Serif JP', serif;
-}
-
-.precio_menu {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-
-.menu_panqueques {
-  background: rgba(83,71,65,.5);
-  padding: 20px;
-  margin-top: 50px;
-}
-
-/* componente de items del menú */
-.lista_menu {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.lista_menu_recomendados {
-  /* configuración de padding específica para la lista de menú de la página principal */
-  padding-bottom: 50px;
-}
-
-.item_menu {
-  width: 49%;
-  display: flex;
-  flex-direction: row-reverse;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
-  margin-bottom: 20px;
-}
-
-.contenido_item_menu {
-  width: 45%;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: #fff;
-}
-
-.imagen_item_menu {
-  width: 55%;
-  object-fit: cover;
-  height: 300px;
-}
-
-.precio_item_menu {
-  color: #42210b;
-  font-size: 18px;
-  text-align: right;
-}
-
-.titulo_item_menu {
-  font-size: 18px;
-  font-family: 'Noto Serif JP', serif;
-}
-
-/* componente de botones */
-.btn {
-  padding: 10px 20px;
+/* Estilos generales para los botones de eliminación y cierre de modal */
+.delete, .modal-close {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: rgba(10, 10, 10, 0.2);
   border: none;
-  border-radius: 5px;
+  border-radius: 290486px;
+  cursor: pointer;
+  pointer-events: auto;
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
+  height: 20px;
+  max-height: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  min-width: 20px;
+  outline: none;
+  position: relative;
+  vertical-align: top;
+  width: 20px;
 }
 
-.btn-detalle {
-  background: #2e58a6;
-  color: #fff;
+/* Pseudo-elementos para la X en botones de eliminación y cierre de modal */
+.delete::before, .modal-close::before, .delete::after, .modal-close::after {
+  background-color: white;
+  content: "";
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform-origin: center center;
 }
 
-.btn-deshabilitado {
-  background: rgba(0,0,0,0.3);
+.delete::before, .modal-close::before {
+  height: 2px;
+  width: 50%;
 }
+
+.delete::after, .modal-close::after {
+  height: 50%;
+  width: 2px;
+}
+
+/* Estilos de hover y focus para botones de eliminación y cierre de modal */
+.delete:hover, .modal-close:hover, .delete:focus, .modal-close:focus {
+  background-color: rgba(10, 10, 10, 0.3);
+}
+
+.delete:active, .modal-close:active {
+  background-color: rgba(10, 10, 10, 0.4);
+}
+
+/* Tamaños específicos para botones de eliminación y cierre de modal */
+.is-small.delete, .is-small.modal-close {
+  height: 16px;
+  max-height: 16px;
+  max-width: 16px;
+  min-height: 16px;
+  min-width: 16px;
+  width: 16px;
+}
+
+.is-medium.delete, .is-medium.modal-close {
+  height: 24px;
+  max-height: 24px;
+  max-width: 24px;
+  min-height: 24px;
+  min-width: 24px;
+  width: 24px;
+}
+
+.is-large.delete, .is-large.modal-close {
+  height: 32px;
+  max-height: 32px;
+  max-width: 32px;
+  min-height: 32px;
+  min-width: 32px;
+  width: 32px;
+}
+
+/* Estilos para indicadores de carga en botones y selectores */
+.button.is-loading::after, .loader, .select.is-loading::after, .control.is-loading::after {
+  -webkit-animation: spinAround 500ms infinite linear;
+  animation: spinAround 500ms infinite linear;
+  border: 2px solid #dbdbdb;
+  border-radius: 290486px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1em;
+  position: relative;
+  width: 1em;
+}
+
+/* Estilos para imágenes y elementos de tamaño específico */
+.image.is-square img,
+.image.is-square .has-ratio, .image.is-1by1 img,
+.image.is-1by1 .has-ratio, .image.is-5by4 img,
+.image.is-5by4 .has-ratio, .image.is-4by3 img,
+.image.is-4by3 .has-ratio, .image.is-3by2 img,
+.image.is-3by2 .has-ratio, .image.is-5by3 img,
+.image.is-5by3 .has-ratio, .image.is-16by9 img,
+.image.is-16by9 .has-ratio, .image.is-2by1 img,
+.image.is-2by1 .has-ratio, .image.is-3by1 img,
+.image.is-3by1 .has-ratio, .image.is-4by5 img,
+.image.is-4by5 .has-ratio, .image.is-3by4 img,
+.image.is-3by4 .has-ratio, .image.is-2by3 img,
+.image.is-2by3 .has-ratio, .image.is-3by5 img,
+.image.is-3by5 .has-ratio, .image.is-9by16 img,
+.image.is-9by16 .has-ratio, .image.is-1by2 img,
+.image.is-1by2 .has-ratio, .image.is-1by3 img,
+.image.is-1by3 .has-ratio, .modal, .modal-background, .is-overlay, .hero-video {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Estilos generales para elementos de formulario y paginación */
+.button, .input, .textarea, .select select, .file-cta,
+.file-name, .pagination-previous,
+.pagination-next,
+.pagination-link,
+.pagination-ellipsis {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: none;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 2.5em;
+  justify-content: flex-start;
+  line-height: 1.5;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: calc(0.75em - 1px);
+  padding-right: calc(0.75em - 1px);
+  padding-top: calc(0.5em - 1px);
+  position: relative;
+  vertical-align: top;
+}
+
+/* Estilos de focus y active para elementos de formulario y paginación */
+.button:focus, .input:focus, .textarea:focus, .select select:focus, .file-cta:focus,
+.file-name:focus, .pagination-previous:focus,
+.pagination-next:focus,
+.pagination-link:focus,
+.pagination-ellipsis:focus, .is-focused.button, .is-focused.input, .is-focused.textarea, .select select.is-focused, .is-focused.file-cta,
+.is-focused.file-name, .is-focused.pagination-previous,
+.is-focused.pagination-next,
+.is-focused.pagination-link,
+.is-focused.pagination-ellipsis, .button:active, .input:active, .textarea:active, .select select:active, .file-cta:active,
+.file-name:active, .pagination-previous:active,
+.pagination-next:active,
+.pagination-link:active,
+.pagination-ellipsis:active, .is-active.button, .is-active.input, .is-active.textarea, .select select.is-active, .is-active.file-cta,
+.is-active.file-name, .is-active.pagination-previous,
+.is-active.pagination-next,
+.is-active.pagination-link,
+.is-active.pagination-ellipsis {
+  outline: none;
+}
+
+/* Estilos para elementos deshabilitados de formulario y paginación */
+.button[disabled], .input[disabled], .textarea[disabled], .
 
 
 /* Bulma Base */

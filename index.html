@@ -1,134 +1,156 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Título del sitio -->
-    <title>Café DIC</title>
-    <!-- Enlace al archivo de normalización de CSS -->
+    <title>DIC cafe</title>
+    <!-- Estilos CSS -->
     <link href="css/normalize.css" rel="stylesheet">
-    <!-- Enlace al archivo principal de CSS -->
     <link href="css/main.css" rel="stylesheet">
-    <!-- Enlace a la fuente de Google -->
+    <!-- Fuente personalizada -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!-- Encabezado -->
     <header>
+      <!-- Navegación -->
       <nav class="header_nav">
-        <!-- Logo del sitio -->
-        <a href="index.html"><img src="imagenes/sample_logo_k.png" class="logo"></a>
+        <a href="index.html" class="logo"><img src="imagenes/sample_logo_k.png"></a>
         <ul class="global_nav">
-          <!-- Enlaces de navegación principal -->
           <a href="index.html" class="global_nav_item">
             <li>Inicio</li>
           </a>
           <a href="menu.html" class="global_nav_item">
             <li>Menú</li>
           </a>
-          <a href="contacto.html" class="global_nav_item">
+          <a href="contact.html" class="global_nav_item">
             <li>Contacto</li>
           </a>
         </ul>
       </nav>
-      <div class="menu_key section_inner">
-        <!-- Contenido clave del menú, actualmente vacío -->
+      <!-- Información clave -->
+      <div class="key section_inner">
+        <h1>Café DIC</h1>
+        <p>café orgánico natural</p>
       </div>
     </header>
-    <div class="wrapper section_inner">
-      <nav class="side_menu">
-        <!-- Título del menú lateral -->
-        <h1 class="side_menu_title">MENÚ</h1>
-        <ul>
-          <!-- Enlaces del menú lateral -->
-          <a href="blueberry_pancakes.html" class="side_menu_item">
-            <li>Panqueques de Arándanos</li>
-          </a>
-          <a href="strawberry_pancakes.html" class="side_menu_item">
-            <li>Panqueques de Fresas</li>
-          </a>
-          <a href="#" class="side_menu_item">
-            <li>Café Blend</li>
-          </a>
-          <a href="#" class="side_menu_item">
-            <li>Café Latte</li>
-          </a>
-          <a href="#" class="side_menu_item">
-            <li>Café Arte</li>
-          </a>
-          <a href="#" class="side_menu_item">
-            <li>Café Helado</li>
-          </a>
-        </ul>
-        <!-- Anuncio lateral -->
-        <aside class="side_ad">
-          Aquí puedes ver el calendario de días de atención
-        </aside>
-      </nav>
-      <article class="main">
-        <section>
-          <!-- Imagen del menú -->
-          <img src="imagenes/sample_pancake1.jpg" class="menu_image">
-          <!-- Nombre del menú -->
-          <h1 class="menu_name">Panqueques de Arándanos</h1>
-          <!-- Precio del menú -->
-          <p class="menu_price">¥1,200</p>
-          <!-- Descripción del menú -->
-          <p>
-            Panqueques esponjosos hechos con harina y huevos de alta calidad, cubiertos con arándanos frescos.
-            Disfrútalos con un toque de jarabe de arce para un dulzor refinado.
+    <!-- Sección principal -->
+    <section>
+      <!-- Artículo 1: Concepto -->
+      <article class="section_inner">
+        <div class="section_title">
+          <h1>CONCEPTO</h1>
+          <p>Especialidad de DIC Coffee</p>
+        </div>
+        <div class="concept_inner">
+          <p class="concept_content">
+            El café de DIC Coffee utiliza granos de café de Rwanda llamados <strong>"DIC Beans"</strong>.<br>
+            Nos abastecemos directamente de agricultores de café con los que tenemos contrato.<br>
+            Es una taza equilibrada entre acidez y cuerpo, con un dulzor afrutado. Disfrute de nuestra taza especializada.<br>
+            <small>*Café operado por DIVE INTO CODE Co., Ltd. en asociación con granjas.</small>
           </p>
-        </section>
-       
-        <section class="pancake_menu">
-          <!-- Título de la sección del menú de panqueques -->
-          <h1 class="section_title">Menú de Panqueques</h1>
-          <ul class="menu_list">
-            <!-- Ítem del menú de panqueques -->
+          <img src="imagenes/sample_concept.jpg" class="concept_image">
+        </div>
+      </article>
+      <!-- Artículo 2: Menú -->
+      <article class="section_inner menu_section">
+        <div class="section_title">
+          <h1>MENÚ</h1>
+        </div>
+        <section>
+          <div class="center">
+            <h1 class="menu_title">Menú Recomendado</h1>
+          </div>
+          <!-- Lista de menú recomendado -->
+          <ul class="menu_list menu_list_recommended">
             <li class="menu_item">
               <div class="menu_item_content">
-                <h2 class="menu_item_title">Panqueques de Arándanos</h2>
+                <h2 class="menu_item_title">Panqueques de arándanos</h2>
+                <p>Panqueques con arándanos frescos como topping</p>
                 <p class="menu_item_price">¥1,200</p>
-                <button class="btn btn-disabled">Agotado</button>
               </div>
               <img src="imagenes/sample_pancake1.jpg" class="menu_item_image">
             </li>
             <li class="menu_item">
               <div class="menu_item_content">
-                <h2 class="menu_item_title">Panqueques de Fresas</h2>
+                <h2 class="menu_item_title">Panqueques de fresa</h2>
+                <p>Disfrute de la colaboración entre fresas y miel</p>
                 <p class="menu_item_price">¥1,300</p>
-                <button class="btn btn-detail">Ver Detalles</button>
               </div>
               <img src="imagenes/sample_pancake2.jpg" class="menu_item_image">
             </li>
-            <li class="menu_item">
-              <div class="menu_item_content">
-                <h2 class="menu_item_title">Panqueques Esponjosos</h2>
-                <p class="menu_item_price">¥1,100</p>
-                <button class="btn btn-detail">Ver Detalles</button>
+          </ul>
+        </section>
+        <section>
+          <div class="center">
+            <h1 class="menu_title">Menú de Café</h1>
+          </div>
+          <!-- Lista de menú de café -->
+          <ul class="menu_list coffee_menu">
+            <li class="caffee_menu_list_item">
+              <div class="caffee_menu_content">
+                <h2 class="menu_item_title">Café blend</h2>
+                <p class="caffee_menu_price">¥400</p>
               </div>
-              <img src="imagenes/sample_pancake3.jpg" class="menu_item_image">
+              <img src="imagenes/sample_cafe1.jpg" class="caffee_menu_image">
             </li>
-            <li class="menu_item">
-              <div class="menu_item_content">
-                <h2 class="menu_item_title">Panqueques de Plátano</h2>
-                <p class="menu_item_price">¥1,200</p>
-                <button class="btn btn-detail">Ver Detalles</button>
+            <li class="caffee_menu_list_item">
+              <div class="caffee_menu_content">
+                <h2 class="menu_item_title">Café latte artístico</h2>
+                <p class="caffee_menu_price">¥500</p>
               </div>
-              <img src="imagenes/sample_pancake4.jpg" class="menu_item_image">
+              <img src="imagenes/sample_cafe2.jpg" class="caffee_menu_image">
+            </li>
+            <li class="caffee_menu_list_item">
+              <div class="caffee_menu_content">
+                <h2 class="menu_item_title">Café latte</h2>
+                <p class="caffee_menu_price">¥450</p>
+              </div>
+              <img src="imagenes/sample_cafe3.jpg" class="caffee_menu_image">
+            </li>
+            <li class="caffee_menu_list_item">
+              <div class="caffee_menu_content">
+                <h2 class="menu_item_title">Café helado</h2>
+                <p class="caffee_menu_price">¥350</p>
+              </div>
+              <img src="imagenes/sample_cafe4.jpg" class="caffee_menu_image">
             </li>
           </ul>
         </section>
       </article>
-    </div>
+      <!-- Artículo 3: Acceso -->
+      <article class="section_inner">
+        <div class="section_title">
+          <h1>ACCESO</h1>
+          <p>Información de la tienda</p>
+        </div>
+        <!-- Detalles de la tienda -->
+        <dl class="info">
+          <dt class="info_title">Horario de apertura</dt>
+          <dd>10:00 - 19:00<br>Cerrado los jueves</dd>
+        </dl>
+        <dl class="info">
+          <dt class="info_title">Dirección</dt>
+          <dd>
+            〒150-0044 Shibuya-ku, Tokio, Maruyama-cho 28-4, Edificio Ooba, Ala A<br>
+            TEL: 03-5459-1808
+          </dd>
+        </dl>
+        <!-- Mapa de ubicación -->
+        <div class="frame_area">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5723.1768465004225!2d139.69187157100714!3d35.65611896498496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b55bb763035%3A0xce78de49371df292!2z44CSMTUwLTAwNDQg5p2x5Lqs6YO95riL6LC35Yy65YaG5bGx55S677yS77yY4oiS77yU!5e0!3m2!1sja!2sjp!4v1467122697560" id="map" class="frame_child" frameborder="0" style="border:0" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+      </article>
+    </section> 
+    <!-- Pie de página -->
     <footer class="footer">
       <nav>
         <ul class="footer_nav">
-          <!-- Enlaces de navegación del pie de página -->
           <a href="index.html" class="footer_nav_item">
             <li>Inicio</li>
           </a>
           <a href="menu.html" class="footer_nav_item">
             <li>Menú</li>
           </a>
-          <a href="contacto.html" class="footer_nav_item">
+          <a href="contact.html" class="footer_nav_item">
             <li>Contacto</li>
           </a>
           <a href="index.html" class="footer_nav_item">

@@ -1,120 +1,128 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Título del sitio -->
-    <title>Café DIC</title>
-    <!-- Enlace al archivo de normalización de CSS -->
+    <title>DIC café</title>
+    <!-- Estilos CSS -->
     <link href="css/normalize.css" rel="stylesheet">
-    <!-- Enlace al archivo principal de CSS -->
     <link href="css/main.css" rel="stylesheet">
-    <!-- Enlace a la fuente de Google -->
+    <!-- Fuente personalizada japonesa -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!-- Encabezado -->
     <header>
+      <!-- Navegación principal -->
       <nav class="header_nav">
-        <!-- Logo del sitio -->
-        <a href="index.html" class="logo"><img src="imagenes/sample_logo_k.png"></a>
+        <a href="index.html"><img src="imagenes/sample_logo_k.png" class="logo"></a>
         <ul class="global_nav">
-          <!-- Enlaces de navegación principal -->
           <a href="index.html" class="global_nav_item">
             <li>Inicio</li>
           </a>
           <a href="menu.html" class="global_nav_item">
             <li>Menú</li>
           </a>
-          <a href="contacto.html" class="global_nav_item">
+          <a href="contact.html" class="global_nav_item">
             <li>Contacto</li>
           </a>
         </ul>
       </nav>
-      <div class="key section_inner">
-        <!-- Título principal del sitio -->
-        <h1>Café DIC</h1>
-        <!-- Descripción del sitio -->
-        <p>café natural y orgánico</p>
+      <!-- Información clave de menú (vacío en el original) -->
+      <div class="menu_key section_inner">
       </div>
     </header>
-    <section>
-      <article class="section_inner">
-        <div class="section_title">
-          <!-- Título de la sección Concepto -->
-          <h1>CONCEPTO</h1>
-          <!-- Descripción de la sección en japonés -->
-          <p>El compromiso de Café DIC</p>
-        </div>
-        <div class="concept_inner">
-          <!-- Contenido de la sección Concepto -->
-          <p class="concept_content">
-            El café de Café DIC utiliza granos de café de Ruanda, conocidos como <strong>"DIC Beans"</strong>.<br>
-            Nos abastecemos directamente de agricultores con los que tenemos contratos.<br>
-            Es una taza con un equilibrio perfecto entre acidez y cuerpo, con un dulzor afrutado. Disfrute de una taza elaborada con cuidado.<br>
-            <small>* El café es operado y tiene contratos con granjas a través de DIVE INTO CODE Corp.</small>
-          </p>
-          <!-- Imagen de la sección Concepto -->
-          <img src="imagenes/sample_concept.jpg" class="concept_image">
-        </div>
-      </article>
-      <article class="section_inner menu_section">
-        <div class="section_title">
-          <!-- Título de la sección Menú -->
-          <h1>MENÚ</h1>
-        </div>
+    <!-- Contenido principal -->
+    <div class="wrapper section_inner">
+      <!-- Menú lateral -->
+      <nav class="side_menu">
+        <h1 class="side_menu_title">MENÚ</h1>
+        <ul>
+          <a href="blueberry_pancakes.html" class="side_menu_item">
+            <li>Panqueques de arándanos</li>
+          </a>
+          <a href="strawberry_pancakes.html" class="side_menu_item">
+            <li>Panqueques de fresa</li>
+          </a>
+          <a href="#" class="side_menu_item">
+            <li>Café blend</li>
+          </a>
+          <a href="#" class="side_menu_item">
+            <li>Café latte</li>
+          </a>
+          <a href="#" class="side_menu_item">
+            <li>Café artístico</li>
+          </a>
+          <a href="#" class="side_menu_item">
+            <li>Café helado</li>
+          </a>
+        </ul>
+        <!-- Anuncio lateral -->
+        <aside class="side_ad">
+          El calendario de días laborables está aquí
+        </aside>
+      </nav>
+      <!-- Contenido principal -->
+      <article class="main">
         <section>
-          <div class="center">
-            <!-- Título del menú recomendado -->
-            <h1 class="menu_title">Menú Recomendado</h1>
-            <!-- Elemento del menú -->
-            <article class="menu_item">
+          <img src="imagenes/sample_pancake1.jpg" class="menu_image">
+          <h1 class="menu_name">Panqueques de arándanos</h1>
+          <p class="menu_price">¥1,200</p>
+          <p>
+            Utilizamos harina y huevos seleccionados cuidadosamente para hacer panqueques esponjosos, cubiertos con arándanos frescos.
+            Sírvase agregar si lo desea un delicado jarabe de arce para disfrutar.
+          </p>
+        </section>
+       
+        <!-- Sección de menú de panqueques -->
+        <section class="pancake_menu">
+          <h1 class="section_title">Menú de Panqueques</h1>
+          <ul class="menu_list">
+            <li class="menu_item">
               <div class="menu_item_content">
-                <h2 class="menu_item_title">Café Blend</h2>
-                <p class="menu_item_text">El sabor perfecto con el balance ideal entre acidez y cuerpo.</p>
-                <p class="menu_item_price">¥500</p>
+                <h2 class="menu_item_title">Panqueques de arándanos</h2>
+                <p class="menu_item_price">¥1,200</p>
+                <button class="btn btn-disabled">Agotado</button>
               </div>
-              <img src="imagenes/sample_menu1.jpg" class="menu_item_image">
-            </article>
-            <!-- Elemento del menú -->
-            <article class="menu_item">
+              <img src="imagenes/sample_pancake1.jpg" class="menu_item_image">
+            </li>
+            <li class="menu_item">
               <div class="menu_item_content">
-                <h2 class="menu_item_title">Café Latte</h2>
-                <p class="menu_item_text">Una mezcla suave y cremosa para disfrutar.</p>
-                <p class="menu_item_price">¥600</p>
+                <h2 class="menu_item_title">Panqueques de fresa</h2>
+                <p class="menu_item_price">¥1,300</p>
+                <button class="btn btn-detail">Ver detalles</button>
               </div>
-              <img src="imagenes/sample_menu2.jpg" class="menu_item_image">
-            </article>
-            <!-- Elemento del menú -->
-            <article class="menu_item">
+              <img src="imagenes/sample_pancake2.jpg" class="menu_item_image">
+            </li>
+            <li class="menu_item">
               <div class="menu_item_content">
-                <h2 class="menu_item_title">Café Arte</h2>
-                <p class="menu_item_text">Disfruta de arte latte único en cada taza.</p>
-                <p class="menu_item_price">¥700</p>
+                <h2 class="menu_item_title">Panqueques esponjosos</h2>
+                <p class="menu_item_price">¥1,100</p>
+                <button class="btn btn-detail">Ver detalles</button>
               </div>
-              <img src="imagenes/sample_menu3.jpg" class="menu_item_image">
-            </article>
-            <!-- Elemento del menú -->
-            <article class="menu_item">
+              <img src="imagenes/sample_pancake3.jpg" class="menu_item_image">
+            </li>
+            <li class="menu_item">
               <div class="menu_item_content">
-                <h2 class="menu_item_title">Café Helado</h2>
-                <p class="menu_item_text">Refrescante y perfecto para los días calurosos.</p>
-                <p class="menu_item_price">¥650</p>
+                <h2 class="menu_item_title">Panqueques de Banana</h2>
+                <p class="menu_item_price">¥1,200</p>
+                <button class="btn btn-detail">Ver detalles</button>
               </div>
-              <img src="imagenes/sample_menu4.jpg" class="menu_item_image">
-            </article>
-          </div>
+              <img src="imagenes/sample_pancake4.jpg" class="menu_item_image">
+            </li>
+          </ul>
         </section>
       </article>
-    </section>
+    </div>
+    <!-- Pie de página -->
     <footer class="footer">
       <nav>
         <ul class="footer_nav">
-          <!-- Enlaces de navegación del pie de página -->
           <a href="index.html" class="footer_nav_item">
             <li>Inicio</li>
           </a>
           <a href="menu.html" class="footer_nav_item">
             <li>Menú</li>
           </a>
-          <a href="contacto.html" class="footer_nav_item">
+          <a href="contact.html" class="footer_nav_item">
             <li>Contacto</li>
           </a>
           <a href="index.html" class="footer_nav_item">
@@ -124,7 +132,6 @@
           </a>
         </ul>
       </nav>
-      <!-- Derechos reservados del pie de página -->
       <p class="footer_right">© DIVE INTO CODE Corp. Todos los derechos reservados.</p>
     </footer>
   </body>

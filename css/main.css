@@ -1,24 +1,20 @@
-/* Seccion del main */
+@import 'bulma/css/bulma.css';
 
-@import 'bulma/css/bulma.css'; /* Importacion de bulma.css */
-
-
+/* Estilos generales */
 html {
   height: 100%;
 }
-
 body {
   position: relative;
   padding-bottom: 75px;
   min-height: 100%;
 }
-
-.centrar {
+.center {
   text-align: center;
 }
 
-/* encabezado */
-.encabezado_nav {
+/* Encabezado */
+.header_nav {
   background: linear-gradient(90deg, #fff 20%, rgba(0,0,0,.6) 60%);
   display: flex;
   justify-content: space-between;
@@ -28,24 +24,20 @@ body {
   top: 0;
   width: 100%;
 }
-
 .logo {
   width: 120px;
   display: flex;
   align-items: center;
 }
-
-.logo img {
+.logo img{
   width: 100%;
 }
-
-.nav_global {
+.global_nav {
   display: flex;
   justify-content: flex-end;
   align-items: stretch;
 }
-
-.nav_global_item {
+.global_nav_item {
   padding: 0 20px;
   display: flex;
   flex-direction: column;
@@ -53,14 +45,13 @@ body {
   color: #fff;
   text-decoration: none;
 }
-
-.nav_global_item:hover {
+.global_nav_item:hover {
   background: #fff;
   color: #42210b;
 }
 
-/* pie de página */
-.pie {
+/* Pie de página */
+.footer {
   width: 100%;
   background: #251e19;
   position: absolute;
@@ -68,14 +59,12 @@ body {
   padding-bottom: 10px;
   height: 75px;
 }
-
-.pie_nav {
+.footer_nav {
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
 }
-
-.pie_nav_item {
+.footer_nav_item {
   padding: 0 10px;
   display: flex;
   flex-direction: column;
@@ -84,19 +73,17 @@ body {
   text-decoration: none;
   font-size: 15px;
 }
-
-.pie_logo {
+.footer_logo {
   width: 80px;
 }
-
-.pie_derechos {
+.footer_right {
   color: white;
   text-align: center;
   font-size: 10px;
 }
 
-/* visual principal */
-.visual {
+/* Key visual */
+.key {
   height: 500px;
   background: center / cover no-repeat url("../imagenes/sample_key.jpg");
   display: flex;
@@ -104,52 +91,45 @@ body {
   justify-content: center;
   font-family: 'Noto Serif JP', serif;
 }
-
-.visual h1 {
+.key h1{
   font-size: 2.5rem;
 }
 
-/* sección concepto */
-.concepto_inner {
+/* Sección de concepto */
+.concept_inner {
   display: flex;
   justify-content: space-between;
 }
-
-.concepto_contenido {
+.concept_content {
   width: 60%;
 }
-
-.concepto_imagen {
+.concept_image {
   width: 35%;
 }
 
-/* sección común */
-.seccion_inner {
+/* Sección común */
+.section_inner {
   padding: 50px 10% 30px;
 }
-
-.seccion_titulo {
+.section_title {
   font-family: 'Noto Serif JP', serif;
   text-align: center;
   margin-bottom: 50px;
 }
 
-/* sección información */
+/* Sección de información de la tienda */
 .info {
   display: flex;
 }
-
-.info_titulo {
+.info_title {
   width: 80px;
 }
-
-.area_frame {
+.frame_area {
   position: relative;
   width: 100%;
   padding-top: 56.25%;
 }
-
-.frame_child {
+.frame_child{
   position: absolute;
   top: 0;
   right: 0;
@@ -157,13 +137,12 @@ body {
   height: 100%;
 }
 
-/* sección menú */
-.seccion_menu {
+/* Sección de menú */
+.menu_section {
   background: url("../imagenes/sample_menu_bg.jpg") no-repeat bottom;
   background-attachment: fixed;
 }
-
-.titulo_menu {
+.menu_title {
   display: inline-block;
   font-family: 'Noto Serif JP', serif;
   text-align: center;
@@ -173,118 +152,107 @@ body {
   margin-bottom: 20px;
 }
 
-.menu_cafe {
+.coffee_menu {
   background: #fff;
   padding: 20px;
 }
-
-.menu_lista_item {
+.caffee_menu_list_item {
   width: 49%;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   padding: 10px;
 }
-
-.menu_imagen_cafe {
+.caffee_menu_image {
   width: 20%;
   border-radius: 50%;
 }
-
-.menu_contenido_cafe {
+.caffee_menu_content {
   width: 80%;
   padding: 10px;
 }
 
-/* página de menú */
-.menu_visual {
+
+/* Página de menú */
+.menu_key {
   height: 100px;
   background: url("../imagenes/sample_key.jpg") no-repeat center;
   background-size: cover;
 }
-
 .wrapper {
   display: flex;
 }
-
 .main {
   padding: 0 0 0 50px;
   width: calc(100% - 200px);
 }
 
-/* menú lateral de la página de menú */
-.menu_lateral {
+/* Página de menú - Menú lateral */
+.side_menu {
   width: 200px;
 }
-
-.titulo_menu_lateral {
+.side_menu_title {
   font-family: 'Noto Serif JP', serif;
   font-size: 25px;
   padding-left: 10px;
 }
-
-.item_menu_lateral {
+.side_menu_item {
   padding: 20px 10px;
   border-bottom: solid #42210b 1px;
   display: block;
   text-decoration: none;
 }
-
-.item_menu_lateral:hover {
+.side_menu_item:hover {
   background: rgba(83,71,65,.3);
 }
-
-.anuncio_lateral {
+.side_ad {
   color: #fff;
   background: rgba(83,71,65,.7);
   padding: 20px;
   margin: 30px 0;
 }
 
-/* página principal del menú */
-.imagen_menu {
+/* Página de menú - Contenido principal */
+.menu_image {
   width: 100%;
   height: 500px;
   object-fit: cover;
 }
-
-.nombre_menu {
+.menu_name {
   font-family: 'Noto Serif JP', serif;
 }
-
-.precio_menu {
+.menu_price {
   font-family: 'Noto Serif JP', serif;
   font-size: 20px;
   margin-bottom: 30px;
 }
 
-.menu_panqueques {
+.pancake_menu {
   background: rgba(83,71,65,.5);
   padding: 20px;
   margin-top: 50px;
 }
 
-/* componente de items del menú */
-.lista_menu {
+/* Componente de elementos de menú */
+.menu_list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.lista_menu_recomendados {
-  /* configuración de padding específica para la lista de menú de la página principal */
+.menu_list_recommended {
+  /* Configuración adicional de padding para la lista de menú en la página principal (clase múltiple) */
   padding-bottom: 50px;
 }
 
-.item_menu {
+.menu_item {
   width: 49%;
   display: flex;
   flex-direction: row-reverse;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
   margin-bottom: 20px;
 }
-
-.contenido_item_menu {
+.menu_item_content {
   width: 45%;
   padding: 10px;
   display: flex;
@@ -292,36 +260,32 @@ body {
   justify-content: space-between;
   background: #fff;
 }
-
-.imagen_item_menu {
+.menu_item_image {
   width: 55%;
   object-fit: cover;
   height: 300px;
 }
-
-.precio_item_menu {
+.menu_item_price {
   color: #42210b;
   font-size: 18px;
   text-align: right;
 }
 
-.titulo_item_menu {
+.menu_item_title {
   font-size: 18px;
   font-family: 'Noto Serif JP', serif;
 }
 
-/* componente de botones */
+/* Componente de botón */
 .btn {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
 }
-
-.btn-detalle {
-  background: #2e58a6;
+.btn-detail {
+  background:#2e58a6;
   color: #fff;
 }
-
-.btn-deshabilitado {
+.btn-disabled {
   background: rgba(0,0,0,0.3);
 }
